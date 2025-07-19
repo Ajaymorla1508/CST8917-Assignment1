@@ -173,11 +173,11 @@ CREATE TABLE ImageMetadata (
 ```
 ### Troubleshooting & Fixes
 Issue	Cause	Fix
-❌ Blob trigger was calling Orchestrator instead of Extract directly	Designed to use Durable pattern for chaining	❗ It's intentional — Orchestrator handles chaining (Extract → Store)
-❌ Invalid column name 'SizeKB' in SQL	Case mismatch or missing table	✅ Enclosed column names in square brackets: [SizeKB]
-❌ No module named 'PIL'	Missing dependency	✅ Added Pillow to requirements.txt
-❌ Blob content not accessible in orchestrator	Blob client not configured properly	✅ Used BlobServiceClient with correct connection string and container name
-❌ Function not triggering	Wrong storage/container or misconfigured bindings	✅ Verified container name in local.settings.json and function.json
+1. Blob trigger was calling Orchestrator instead of Extract directly, Designed to use Durable pattern for chaining, It's intentional — Orchestrator handles chaining (Extract → Store)
+2. Invalid column name 'SizeKB' in SQL	Case mismatch or missing table - Enclosed column names in square brackets: [FileSizeKB]
+3. No module named 'PIL'	Missing dependency - Added Pillow to requirements.txt
+4. Blob content not accessible in orchestrator	Blob client not configured properly	- Used BlobServiceClient with correct connection string and container name
+5. Function not triggering	Wrong storage/container or misconfigured bindings - Verified container name in local.settings.json and function.json
 
 ✅ Environment Configuration
 local.settings.json
