@@ -220,13 +220,13 @@ Successfully stored in Azure SQL Database under ImageMetadata.
 ### Screenshots
 
 Blob uploaded in Azure Storage
-![Storage-blob](Storage-blob.png)
+![Storage-blob](images/Storage-blob.png)
 
 Azure Function Logs (Orchestrator + Activities)
-![Function_logs](Function_logs.png)
+![Function_logs](images/Function_logs.png)
 
 Metadata visible in Azure SQL Database
-![Db_Table](Db_Table.png)
+![Db_Table](images/Db_Table.png)
 
 
 🏁 Conclusion
