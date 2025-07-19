@@ -3,8 +3,7 @@
 
 ## Author
 **Ajay Morla**  
-**Email:** morlaajay38@gmail.com  
-**Course:** CST8921 – Cloud Industry Trends  
+**Course:** CST8917 – Serverless Applications  
 **Lab Title:** Serverless Image Metadata Extraction and Storage  
 
 ---
