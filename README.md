@@ -3,8 +3,7 @@
 
 ## Author
 **Ajay Morla**  
-**Course:** CST8917 – Serverless Applications  
-**Lab Title:** Serverless Image Metadata Extraction and Storage  
+**Course:** CST8917 – Serverless Applications   
 
 ---
 
@@ -31,15 +30,15 @@ Durable Orchestrator Function
 ExtractMetadata  →   StoreMetadata (Azure SQL)
 ```
 ### Azure Resources Used
-Azure Blob Storage (to store images)
+1. Azure Blob Storage (to store images)
 
-Azure Function App (Python, Durable Functions)
+2. Azure Function App (Python, Durable Functions)
 
-Azure SQL Database (to store extracted metadata)
+3. Azure SQL Database (to store extracted metadata)
 
-Azure Application Insights (for logs)
+4. Azure Application Insights (for logs)
 
-Azure Storage Account (function triggers)
+5. Azure Storage Account (function triggers)
 
 ### Project Structure
 ```bash
@@ -78,9 +77,7 @@ async def main(blob: func.InputStream, starter: str):
 Purpose: Triggers when a new blob is uploaded. Starts the durable function orchestration.
 
 2. OrchestratorFunction
-python
-Copy
-Edit
+```python
 import azure.durable_functions as df
 import base64
 import logging
@@ -90,7 +87,7 @@ import os
 async def main(context: df.DurableOrchestrationContext):
     input_data = context.get_input()
     blob_name = input_data["blob_name"]
-
+```
   # Step 1: Download blob content
     blob_conn_str = os.environ["AzureWebJobsStorage"]
     blob_service = BlobServiceClient.from_connection_string(blob_conn_str)
@@ -221,15 +218,21 @@ Successfully stored in Azure SQL Database under ImageMetadata.
 ```
 
 ### Screenshots
-💡 Add the following screenshots:
 
 Blob uploaded in Azure Storage
+![Storage-blob](Storage-blob.png)
 
 Azure Function Logs (Orchestrator + Activities)
+![Function_logs](Function_logs.png)
 
 Metadata visible in Azure SQL Database
+![Db_Table](Db_Table.png)
 
-Visual Studio Code Function App Structure
 
 🏁 Conclusion
 This lab demonstrates a powerful use of serverless architecture and Durable Functions to automate image processing workflows using Azure. It showcases integration between Blob Storage, Azure Functions, Durable Orchestration, and SQL Database.
+
+### Youtube Demo Link:
+[Watch the 5-minute demo on YouTube](https://www.youtube.com/watch?v=QrMHR35nZAk)
+
+---
