@@ -1,7 +1,7 @@
 # CST8917-Assignment1
-# 📸 Serverless Image Metadata Extraction Pipeline (Azure Functions)
+# Serverless Image Metadata Extraction Pipeline (Azure Functions)
 
-## 👨‍💻 Author
+## Author
 **Ajay Morla**  
 **Email:** morlaajay38@gmail.com  
 **Course:** CST8921 – Cloud Industry Trends  
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Objective
+## Objective
 
 To build a serverless pipeline using Azure Functions that automatically:
 1. Triggers on blob upload (image file)
@@ -18,7 +18,7 @@ To build a serverless pipeline using Azure Functions that automatically:
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 ```plaintext
 Azure Blob Storage (Trigger)
